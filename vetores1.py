@@ -28,3 +28,6 @@ lista_idades = [5,4,3,2,1]
 lista_idades.sort()
 print(lista_idades)
 
+lista_idades = [5,4,3,2,1]
+lista_idades[0:len(lista_idades)-1]
+print(lista_idades)
