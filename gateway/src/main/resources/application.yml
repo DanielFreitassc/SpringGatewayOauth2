@@ -1,0 +1,31 @@
+server:
+    port: 9002
+
+spring:
+    application:
+        name: gateway
+
+    security:
+        oauth2:
+            client:
+                registration:
+                  keycloak:
+                    client-id: ${CLIENT_ID}
+                    client-secret: ${CLIENT_SECRET}
+                    scope: openid, profile, email
+                provider:
+                    keycloak:
+                        issuer-uri: http://localhost:8080/realms/${KEYCLOAK_REALM}
+    cloud:
+        gateway:     
+            routes:
+              - id: hello-api
+                uri: http://localhost:8081
+                predicates:
+                  - Path=/hello/**
+                filters:
+                  - TokenRelay= 
+
+
+      
+          
