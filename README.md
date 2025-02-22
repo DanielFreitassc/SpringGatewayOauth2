@@ -117,4 +117,3 @@ Se tudo funcionou, significa que:
 
 ## **Conclusão**
 Agora você tem um ambiente **Keycloak + API Gateway + Resource Server** rodando com segurança OAuth2! 🚀  
-
